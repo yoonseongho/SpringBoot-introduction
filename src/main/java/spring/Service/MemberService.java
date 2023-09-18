@@ -1,5 +1,7 @@
 package spring.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import spring.domain.Member;
 import spring.repository.MemberRepository;
 
@@ -13,7 +15,6 @@ public class MemberService {
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
-
 
     /**
      * 회원가입
