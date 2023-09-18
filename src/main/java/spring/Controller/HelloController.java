@@ -15,11 +15,11 @@ public class HelloController {
         return "hello";
     }
 
-//    @GetMapping("/hello-mvc")
-//    public String helloMve(@RequestParam("name") String name, Model model) {
-//        model.addAttribute("name", name);
-//        return "hello-template";
-//    }
+    /* @GetMapping("/hello-mvc")
+    public String helloMve(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello-template";
+    } */
 
     @GetMapping("/hello-string")
     @ResponseBody
