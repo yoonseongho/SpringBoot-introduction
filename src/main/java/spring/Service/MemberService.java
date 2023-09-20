@@ -12,18 +12,10 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    long start = System.currentTimeMillis();
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
-    }
-
-    /**
-     * 회원가입
-     */
-    public Long join(Member member) {
-
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
@@ -38,9 +30,19 @@ public class MemberService {
     }
 
     /**
-     * 회원 전체 조회
+     * 회원가입
+     */
+    public Long join(Member member) {
+        validateDuplicateMember(member); //중복 회원 검증
+        memberRepository.save(member);
+        return member.getId();
+    }
+
+    /**
+     * 전체 회원 조회
      */
     public List<Member> findMembers() {
+
         return memberRepository.findAll();
     }
 

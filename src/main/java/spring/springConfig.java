@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.Service.MemberService;
+import spring.aop.TimeTraceAop;
 import spring.repository.JdbcMemberRepository;
 import spring.repository.MemberRepository;
 
